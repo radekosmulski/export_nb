@@ -10,6 +10,7 @@ import ast
 from execnb.nbio import *
 from execnb.shell import *
 from fastcore.utils import *
+from fastcore.script import *
 from pathlib import Path
 
 # %% ../nbs/00_core.ipynb 6
@@ -24,9 +25,10 @@ def write_cells(cells, file):
             file.write(f'{strip_directives(cell.source)}')
 
 @call_parse
-def export_nb(fname:str):
-    fpath = Path('example.ipynb')
-    nb = read_nb(fname)
+def export_nb(file_name:str):
+    "Export notebook with `file_name` to .py"
+    fpath = Path(file_name)
+    nb = read_nb(fpath)
     
     # grab the source from all the cells that have an `export` comment
     cells = L(cell for cell in nb.cells if re.match(r'#\s*\|export', cell.source))
