@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "export_nb",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "export_nb"
+    ]
+  },
+  {
+    "objectID": "index.html#developer-guide",
+    "href": "index.html#developer-guide",
+    "title": "export_nb",
+    "section": "Developer Guide",
+    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall export_nb in Development mode\n# make sure export_nb package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to export_nb\n$ nbdev_prepare",
+    "crumbs": [
+      "export_nb"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "export_nb",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/radekosmulski/export_nb.git\nor from conda\n$ conda install -c radekosmulski export_nb\nor from pypi\n$ pip install export_nb\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "crumbs": [
+      "export_nb"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "export_nb",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "export_nb"
+    ]
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "The code here is based on functionality and code from nbdev.\nFor a full-fledged library creator, visit nbdev!\nThis is just a tiny portion of the functionality, but just what I need for small pieces of code here and there (especially on remote machines).\n\n{\n \"cells\": [\n  {\n   \"cell_type\": \"code\",\n   \"execution_count\": 1,\n   \"id\": \"31bebeca-a013-4905-89d9-54e01586f70f\",\n   \"metadata\": {},\n   \"outputs\": [\n    {\n     \"data\": {\n      \"text/plain\": [\n       \"4\"\n      ]\n     },\n     \"execution_count\": 1,\n     \"metadata\": {},\n     \"output_type\": \"execute_result\"\n    }\n   ],\n   \"source\": [\n    \"2+2\"\n   ]\n  },\n  {\n   \"cell_type\": \"code\",\n   \"execution_count\": 3,\n   \"id\": \"5d3b74e6-ceb0-45b7-bc61-9e2047c3712a\",\n   \"metadata\": {},\n   \"outputs\": [],\n   \"source\": [\n    \"#|export\\n\",\n    \"def hello_world():\\n\",\n    \"    print('Hello, world!')\"\n   ]\n  },\n  {\n   \"cell_type\": \"code\",\n   \"execution_count\": null,\n   \"id\": \"872fab93-8a4b-4bd0-9de6-1d25dd935757\",\n   \"metadata\": {},\n   \"outputs\": [],\n   \"source\": [\n    \"#|export\\n\",\n    \"def important_function():\\n\",\n    \"    pass\"\n   ]\n  },\n  {\n   \"cell_type\": \"markdown\",\n   \"id\": \"b8897db9-ea21-406e-9998-5d049202e3f3\",\n   \"metadata\": {},\n   \"source\": [\n    \"Markdown cell.\"\n   ]\n  }\n ],\n \"metadata\": {\n  \"kernelspec\": {\n   \"display_name\": \"Python 3 (ipykernel)\",\n   \"language\": \"python\",\n   \"name\": \"python3\"\n  },\n  \"language_info\": {\n   \"codemirror_mode\": {\n    \"name\": \"ipython\",\n    \"version\": 3\n   },\n   \"file_extension\": \".py\",\n   \"mimetype\": \"text/x-python\",\n   \"name\": \"python\",\n   \"nbconvert_exporter\": \"python\",\n   \"pygments_lexer\": \"ipython3\",\n   \"version\": \"3.12.8\"\n  }\n },\n \"nbformat\": 4,\n \"nbformat_minor\": 5\n}\n\nWriting example.ipynb\n\n\n\nsource\n\nexport_nb\n\n export_nb (file_name:str)\n\nExport notebook with file_name to .py\n\nsource\n\n\nwrite_cells\n\n write_cells (cells, file)\n\nWrite cells to file.\n\nsource\n\n\nstrip_directives\n\n strip_directives (text)\n\n\nexport_nb('example.ipynb')\n\nSuccessfully exported example.ipynb to example.py.\n\n\n\ncat example.py\n\n# Exported from notebook: example.ipynb\n\n__all__ = ['hello_world', 'important_function']\n\ndef hello_world():\n    print('Hello, world!')\n\ndef important_function():\n    pass\n\n\n\n\n\n!rm example.ipynb example.py",
+    "crumbs": [
+      "core"
+    ]
+  }
+]
