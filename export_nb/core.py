@@ -13,7 +13,7 @@ from fastcore.utils import *
 from fastcore.script import *
 from pathlib import Path
 
-# %% ../nbs/00_core.ipynb 6
+# %% ../nbs/00_core.ipynb 5
 def strip_directives(text):
     # Split the text into lines and keep only lines that don't start with '#|'
     return '\n'.join(line for line in text.splitlines() if not line.strip().startswith('#|'))
@@ -39,9 +39,11 @@ def export_nb(file_name:str):
     exp_funcs = [f for f in funcs if f[0]!='_']
 
     # write out the file
-    with Path(f'{fpath.stem}.py').open('w',encoding="utf-8") as f:
+    dest = f'{fpath.stem}.py'
+    with Path(dest).open('w',encoding="utf-8") as f:
         dest = '.'
         f.write(f"# Export from notebook: {fpath}\n\n")
         f.write(f"__all__ = {exp_funcs}\n\n")
         write_cells(cells, f)
         f.write('\n')
+    print(f"Successfully exported {file_name} to {dest}.")
