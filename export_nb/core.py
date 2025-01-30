@@ -41,8 +41,7 @@ def export_nb(file_name:str):
     # write out the file
     dest = f'{fpath.stem}.py'
     with Path(dest).open('w',encoding="utf-8") as f:
-        dest = '.'
-        f.write(f"# Export from notebook: {fpath}\n\n")
+        f.write(f"# Exported from notebook: {fpath}\n\n")
         f.write(f"__all__ = {exp_funcs}\n\n")
         write_cells(cells, f)
         f.write('\n')
