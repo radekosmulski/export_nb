@@ -22,7 +22,7 @@ def write_cells(cells, file):
     "Write `cells` to `file`."
     for cell in cells:
         if cell.cell_type=='code' and cell.source.strip():
-            file.write(f'{strip_directives(cell.source)}')
+            file.write(f'{strip_directives(cell.source)}\n\n')
 
 @call_parse
 def export_nb(file_name:str):
