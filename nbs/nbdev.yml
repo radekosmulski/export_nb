@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "export_nb"
+  site-url: "https://radekosmulski.github.io/export_nb"
+  description: "For when you want to convert notebooks to .py files outside of an nbdev project!"
+  repo-branch: main
+  repo-url: "https://github.com/radekosmulski/export_nb"
